@@ -1,0 +1,38 @@
+---
+title: "How IBFT and Utility Bill Payment Works in Real Banking"
+description: "Understanding interbank funds transfer and utility bill payment flows in production banking systems."
+date: "2024-11-08"
+tags: ["Banking", "IBFT", "Payments"]
+category: "Banking/Domain"
+canonical: "https://medium.com/@hinanb/how-ibft-utility-bill-payment-works-in-real-banking-f38eb1367f05"
+---
+
+> Originally published on [Medium](https://medium.com/@hinanb/how-ibft-utility-bill-payment-works-in-real-banking-f38eb1367f05).
+
+In the real banking world, bill payments and interbank funds transfers follow well-defined processes. Here's how they work based on production experience.
+
+## IBFT (Inter Bank Fund Transfer)
+
+1. Customer initiates transfer with beneficiary account details
+2. Bank validates sender account balance and limits
+3. Request sent to central switch (e.g., 1LINK in Pakistan)
+4. Beneficiary bank validates account and credits funds
+5. Confirmation sent back through the switch
+6. Both banks update transaction logs
+7. Customer receives notification (SMS/push/email)
+
+## Utility Bill Payment
+
+1. Customer selects utility provider and enters consumer number
+2. System fetches bill details from utility company API
+3. Customer confirms amount and initiates payment
+4. Funds debited from customer account
+5. Payment forwarded to utility company
+6. Receipt generated and notification sent
+
+## Key Engineering Considerations
+
+- **Idempotency** — Safe retry on network failures
+- **Reconciliation** — Daily settlement with switch/utility providers
+- **Timeout handling** — Reverse transactions on timeout
+- **Audit trail** — Complete transaction logging for compliance

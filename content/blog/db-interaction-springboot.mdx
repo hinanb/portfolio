@@ -1,0 +1,56 @@
+---
+title: "DB Interaction Architecture in Spring Boot"
+description: "Complete guide to database interaction layers in Spring Boot with JPA and Hibernate."
+date: "2025-01-03"
+tags: ["Spring Boot", "JPA", "Hibernate"]
+category: "Spring Boot"
+canonical: "https://medium.com/@hinanb/db-interaction-architecture-in-springboot-429bead3322f"
+---
+
+> Originally published on [Medium](https://medium.com/@hinanb/db-interaction-architecture-in-springboot-429bead3322f).
+
+Spring Boot simplifies database interaction through a layered architecture. Here's how the pieces fit together.
+
+## Setup
+
+Add `spring-boot-starter-data-jpa` and your database driver to `pom.xml`:
+
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-data-jpa</artifactId>
+</dependency>
+```
+
+## Architecture Layers
+
+```
+Controller → Service → Repository → Entity → Database
+```
+
+- **Entity** — JPA-mapped domain objects (`@Entity`)
+- **Repository** — Data access interface (`JpaRepository`)
+- **Service** — Business logic layer (`@Service`)
+- **Controller** — REST endpoints (`@RestController`)
+
+## Key Annotations
+
+```java
+@Entity
+@Table(name = "users")
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    
+    @Column(nullable = false)
+    private String email;
+}
+```
+
+## Best Practices
+
+- Use `@Transactional` at the service layer
+- Avoid N+1 queries with `@EntityGraph` or JOIN FETCH
+- Use DTOs for API responses, not entities directly
+- Configure connection pooling (HikariCP is default)

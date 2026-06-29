@@ -1,0 +1,46 @@
+---
+title: "KAFKA — From My Lens"
+description: "A practical perspective on Apache Kafka for building real-time data pipelines and event-driven systems."
+date: "2024-02-29"
+tags: ["Kafka", "Event-Driven", "Streaming"]
+category: "Kafka/Messaging"
+canonical: "https://medium.com/@hinanb/kafka-from-my-lense-f8ce009745ad"
+---
+
+> Originally published on [Medium](https://medium.com/@hinanb/kafka-from-my-lense-f8ce009745ad).
+
+Kafka is a distributed event streaming platform designed for building real-time data pipelines and streaming applications. Here's my practical perspective from production use.
+
+## Core Concepts
+
+- **Topics** — Categories/streams of records
+- **Partitions** — Parallelism unit within a topic
+- **Producers** — Write data to topics
+- **Consumers** — Read data from topics
+- **Consumer Groups** — Scale consumption horizontally
+- **Brokers** — Kafka server nodes
+
+## Why Kafka?
+
+| Feature | Benefit |
+|---------|---------|
+| High throughput | Millions of events per second |
+| Durability | Persistent, replicated storage |
+| Scalability | Add brokers and partitions |
+| Fault tolerance | Replication across brokers |
+| Decoupling | Producers and consumers are independent |
+
+## Production Patterns
+
+- **Event sourcing** — Store state changes as event log
+- **CQRS** — Separate read/write with event sync
+- **Audit logging** — Immutable event trail
+- **Inter-service communication** — Async messaging between microservices
+
+## Lessons from Production
+
+- Monitor consumer lag as your primary health metric
+- Size partitions based on throughput requirements
+- Use schema registry for event contract management
+- Plan retention policies based on compliance needs
+- Dead letter topics are essential for error handling

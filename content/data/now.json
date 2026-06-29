@@ -1,0 +1,22 @@
+{
+  "lastUpdated": "2026-06-27",
+  "workingOn": [
+    "Government digital transformation systems at Confiz",
+    "Centralized observability with ELK stack across distributed microservices",
+    "Fleet Management and Auditor Management workflow systems"
+  ],
+  "learning": [
+    "Advanced AWS architecture patterns",
+    "System design for high-scale distributed systems",
+    "Gen AI integration in enterprise Java applications"
+  ],
+  "reading": [
+    "Designing Data-Intensive Applications by Martin Kleppmann",
+    "System Design Interview by Alex Xu"
+  ],
+  "focusAreas": [
+    "Microservices architecture",
+    "Event-driven systems with Kafka",
+    "Cloud-native solutions on AWS"
+  ]
+}

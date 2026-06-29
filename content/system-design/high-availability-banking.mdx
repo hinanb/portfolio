@@ -1,0 +1,72 @@
+---
+title: "High-Availability Banking Systems"
+description: "Architecture for retail banking platforms serving 375+ branches with 99.9%+ uptime requirements."
+date: "2023-06-01"
+tags: ["Banking", "High Availability", "System Design"]
+---
+
+## Context
+
+Retail banking platforms must maintain high availability across hundreds of branches, processing real-time payments through interbank networks with strict SLA requirements.
+
+## Architecture
+
+```mermaid
+flowchart TB
+    subgraph ClientLayer[Client Layer]
+        A[Mobile App]
+        B[Web Portal]
+        C[Branch Terminals]
+    end
+    subgraph APILayer[API Layer]
+        D[Load Balancer]
+        E[API Gateway Cluster]
+    end
+    subgraph ServiceLayer[Service Layer]
+        F[Payment Service]
+        G[Account Service]
+        H[Card Service]
+        I[Notification Service]
+    end
+    subgraph DataLayer[Data Layer]
+        J[(Primary DB)]
+        K[(Read Replica)]
+        L[Redis Cache]
+    end
+    subgraph External[External]
+        M[RAAST Network]
+        N[Utility Providers]
+    end
+    A --> D
+    B --> D
+    C --> D
+    D --> E
+    E --> F
+    E --> G
+    E --> H
+    F --> J
+    F --> L
+    G --> K
+    F --> M
+    F --> N
+    H --> I
+```
+
+## Key Design Decisions
+
+- **Active-passive database** with read replicas for query offloading
+- **Redis caching** for frequently accessed account and card data
+- **Circuit breakers** on external payment network integrations
+- **Idempotent APIs** for safe retry of financial transactions
+- **Multi-channel notifications** with fallback (push → SMS → email)
+
+## Modules Delivered
+
+RAAST P2P/P2M, IBFT, card management, utility payments, wallet top-up, savings pot, and personal finance management.
+
+## Reliability Patterns
+
+- Health checks and auto-recovery
+- Graceful degradation when external services are unavailable
+- Transaction logging for audit and reconciliation
+- Rate limiting to protect against abuse

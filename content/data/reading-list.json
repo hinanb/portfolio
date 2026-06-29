@@ -1,0 +1,42 @@
+{
+  "books": [
+    {
+      "title": "Designing Data-Intensive Applications",
+      "author": "Martin Kleppmann",
+      "category": "System Design",
+      "status": "reading"
+    },
+    {
+      "title": "System Design Interview",
+      "author": "Alex Xu",
+      "category": "System Design",
+      "status": "reading"
+    },
+    {
+      "title": "Clean Code",
+      "author": "Robert C. Martin",
+      "category": "Software Engineering",
+      "status": "completed"
+    },
+    {
+      "title": "Effective Java",
+      "author": "Joshua Bloch",
+      "category": "Java",
+      "status": "completed"
+    }
+  ],
+  "articles": [
+    {
+      "title": "Kafka Documentation",
+      "url": "https://kafka.apache.org/documentation/",
+      "category": "Messaging"
+    }
+  ],
+  "podcasts": [
+    {
+      "title": "Software Engineering Daily",
+      "url": "https://softwareengineeringdaily.com/",
+      "category": "Engineering"
+    }
+  ]
+}

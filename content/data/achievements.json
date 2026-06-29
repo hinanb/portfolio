@@ -1,0 +1,25 @@
+{
+  "awards": [
+    {
+      "title": "High Flyer",
+      "organization": "Systems Ltd.",
+      "description": "Recognized for exceptional performance and leadership"
+    },
+    {
+      "title": "Star of the Quarter",
+      "organization": "Systems Ltd.",
+      "description": "Outstanding contribution to banking platform delivery"
+    },
+    {
+      "title": "BFSI Performance Award",
+      "organization": "Systems Ltd.",
+      "description": "Excellence in banking and financial services projects"
+    }
+  ],
+  "metrics": [
+    { "label": "Technical Interviews Conducted", "value": "50+" },
+    { "label": "Freelance Projects Delivered", "value": "50+" },
+    { "label": "Startup Acquired", "value": "PakistanTravelAdvisor.com" },
+    { "label": "Community Members Built", "value": "7,000+" }
+  ]
+}

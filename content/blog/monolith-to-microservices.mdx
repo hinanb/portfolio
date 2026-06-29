@@ -1,0 +1,42 @@
+---
+title: "Monolith to Microservices Transformation"
+description: "Lessons from decomposing a RAAST payment monolith into independent microservices."
+date: "2024-03-08"
+tags: ["Microservices", "Architecture", "Spring Boot"]
+category: "Architecture"
+canonical: "https://medium.com/@hinanb/monolith-to-microservices-transformation-df04fe15c61f"
+---
+
+> Originally published on [Medium](https://medium.com/@hinanb/monolith-to-microservices-transformation-df04fe15c61f).
+
+Previously I had created a RAAST project where Raast ID management and Raast transaction features lived in a single monolith module. Here's how and why we decomposed it.
+
+## The Monolith Problem
+
+- Single deployment unit for unrelated features
+- Scaling required scaling everything together
+- One bug could bring down the entire payment system
+- Team conflicts on shared codebase
+
+## Decomposition Strategy
+
+Split into two bounded contexts:
+
+1. **Raast ID Service** — Register, link/delink, fetch title
+2. **Raast Transaction Service** — P2P/P2M payment processing
+
+## Migration Approach
+
+1. Identify bounded contexts using domain-driven design
+2. Extract shared database tables per service
+3. Introduce API Gateway for routing
+4. Implement inter-service communication via Feign clients
+5. Add event-driven communication via Kafka for async operations
+6. Deploy services independently with CI/CD pipelines
+
+## Results
+
+- Independent scaling of ID vs transaction workloads
+- Faster deployment cycles per team
+- Improved fault isolation
+- Better testability of individual services

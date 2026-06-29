@@ -1,0 +1,12 @@
+{
+  "languages": ["Java", "Python", "SQL", "TypeScript"],
+  "backend": ["Spring Boot", "Microservices", "REST APIs", "Hibernate", "JPA", "Maven/Gradle"],
+  "security": ["Spring Security", "JWT/OAuth2", "Swagger/OpenAPI", "JUnit/Mockito"],
+  "frontend": ["Angular", "TypeScript", "Vue.js"],
+  "messaging": ["Kafka", "MQTT", "SQS"],
+  "databases": ["PostgreSQL", "Oracle", "Redis", "MySQL"],
+  "cloud": ["AWS Lambda", "S3", "Step Functions", "CloudFormation", "Docker", "Jenkins"],
+  "monitoring": ["ELK Stack", "SonarQube"],
+  "ai": ["Gen AI", "Scikit-learn", "ML model integration"],
+  "architecture": ["Distributed Systems", "Event-Driven Architecture", "System Design", "Agile/Scrum"]
+}

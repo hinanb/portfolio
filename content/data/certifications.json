@@ -1,0 +1,16 @@
+[
+  {
+    "name": "AWS Certified Solutions Architect – Associate",
+    "issuer": "Amazon Web Services",
+    "date": "2025-12",
+    "credentialId": "",
+    "verifyUrl": "https://aws.amazon.com/certification/"
+  },
+  {
+    "name": "AWS Certified Cloud Practitioner",
+    "issuer": "Amazon Web Services",
+    "date": "2022-11",
+    "credentialId": "",
+    "verifyUrl": "https://aws.amazon.com/certification/"
+  }
+]

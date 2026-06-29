@@ -1,0 +1,9 @@
+[
+  {
+    "name": "twitterEye",
+    "description": "Open-source PyPI package for analyzing and visualizing public sentiment on Twitter topics.",
+    "url": "https://pypi.org/project/twitterEye/",
+    "tags": ["Python", "NLP", "PyPI"],
+    "type": "package"
+  }
+]

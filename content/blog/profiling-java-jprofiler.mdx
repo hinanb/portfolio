@@ -1,0 +1,38 @@
+---
+title: "Profiling in Java using JProfiler"
+description: "Why profiling is essential for Java developers and how to use JProfiler effectively."
+date: "2025-01-20"
+tags: ["Java", "Performance", "JProfiler"]
+category: "Java/Performance"
+canonical: "https://medium.com/@hinanb/profiling-in-java-using-jprofiler-self-note-5f357cdc37a8"
+---
+
+> Originally published on [Medium](https://medium.com/@hinanb/profiling-in-java-using-jprofiler-self-note-5f357cdc37a8).
+
+> "If you are developing a Java application without using a profiling tool, you are essentially blind as a developer."
+
+## Why Profile?
+
+- Identify memory leaks before they crash production
+- Find CPU hotspots slowing down your application
+- Understand thread contention and deadlocks
+- Optimize database query performance
+
+## JProfiler Features
+
+- **CPU profiling** — Method-level execution time analysis
+- **Memory profiling** — Heap analysis, object allocation tracking
+- **Thread profiling** — Deadlock detection, thread state monitoring
+- **Database profiling** — JDBC call analysis
+
+## Workflow
+
+1. Attach JProfiler to running JVM (local or remote)
+2. Record a session during typical workload
+3. Analyze call tree for hotspots
+4. Inspect heap for memory leaks
+5. Apply fixes and re-profile to validate
+
+## When to Profile
+
+Profile early in development, not just when production is slow. Make profiling part of your regular development workflow.

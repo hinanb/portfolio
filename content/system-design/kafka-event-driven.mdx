@@ -1,0 +1,58 @@
+---
+title: "Event-Driven Systems with Kafka"
+description: "Designing reliable event streaming pipelines for real-time data processing at enterprise scale."
+date: "2024-02-01"
+tags: ["Kafka", "Event-Driven", "Streaming"]
+---
+
+## Context
+
+Modern enterprise systems require real-time data pipelines for transaction logging, audit trails, and inter-service communication. Kafka provides the backbone for event-driven architecture.
+
+## Architecture
+
+```mermaid
+flowchart LR
+    subgraph Producers
+        A[Payment Service]
+        B[User Service]
+        C[Audit Service]
+    end
+    subgraph Kafka
+        D[Topic: transactions]
+        E[Topic: notifications]
+        F[Topic: audit-logs]
+    end
+    subgraph Consumers
+        G[Analytics]
+        H[Notification Engine]
+        I[Compliance]
+    end
+    A --> D
+    B --> E
+    C --> F
+    D --> G
+    E --> H
+    F --> I
+```
+
+## Design Principles
+
+- **Topic partitioning** by business domain for parallel processing
+- **Consumer groups** for horizontal scaling of consumers
+- **Dead letter queues** for failed message handling
+- **Schema registry** for event contract evolution
+- **Exactly-once semantics** for financial transaction events
+
+## Use Cases
+
+- Transaction event logging across banking microservices
+- Real-time notification triggers (email, SMS, push)
+- Audit trail compliance for government systems
+- Log aggregation pipeline feeding ELK stack
+
+## Scalability Considerations
+
+- Partition count aligned with consumer parallelism
+- Retention policies per topic based on compliance requirements
+- Monitoring consumer lag as primary health metric

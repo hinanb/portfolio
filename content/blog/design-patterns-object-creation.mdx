@@ -1,0 +1,43 @@
+---
+title: "Exploring Scalable Object Creation with Design Patterns"
+description: "Creational design patterns for building flexible and scalable object creation in enterprise Java."
+date: "2024-07-22"
+tags: ["Design Patterns", "Java", "Architecture"]
+category: "Design Patterns"
+canonical: "https://medium.com/@hinanb/exploring-scalable-object-creation-with-design-patrrens-162278c417b4"
+---
+
+> Originally published on [Medium](https://medium.com/@hinanb/exploring-scalable-object-creation-with-design-patrrens-162278c417b4).
+
+Object creation design patterns help manage complexity when object instantiation involves dependencies, configuration, or runtime decisions.
+
+## Creational Patterns
+
+### Singleton
+Ensure only one instance exists (e.g., database connection pool config).
+
+### Factory Method
+Define an interface for creating objects, let subclasses decide which class to instantiate.
+
+### Abstract Factory
+Create families of related objects without specifying concrete classes.
+
+### Builder
+Construct complex objects step by step (e.g., `StringBuilder`, HTTP request builders).
+
+### Prototype
+Clone existing objects instead of creating new ones from scratch.
+
+## When to Use What
+
+| Pattern | Use When |
+|---------|----------|
+| Factory Method | Object type decided at runtime |
+| Abstract Factory | Multiple related object families |
+| Builder | Complex object with many optional params |
+| Singleton | Exactly one instance needed globally |
+| Prototype | Object creation is expensive |
+
+## Spring Boot Connection
+
+Spring's `@Bean` and `@Component` annotations leverage Factory and Singleton patterns under the hood, making dependency injection a practical application of these patterns.

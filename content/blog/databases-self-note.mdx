@@ -1,0 +1,36 @@
+---
+title: "Databases — Self Note"
+description: "ACID properties, database types, and fundamental concepts for backend engineers."
+date: "2025-02-10"
+tags: ["Databases", "ACID", "SQL"]
+category: "Databases"
+canonical: "https://medium.com/@hinanb/databases-self-note-1fe109446fdf"
+---
+
+> Originally published on [Medium](https://medium.com/@hinanb/databases-self-note-1fe109446fdf).
+
+A personal reference on database fundamentals every backend engineer should internalize.
+
+## ACID Properties
+
+- **Atomicity** — Transactions are all-or-nothing
+- **Consistency** — Database moves from one valid state to another
+- **Isolation** — Concurrent transactions don't interfere
+- **Durability** — Committed data survives system failures
+
+## Database Types
+
+| Type | Use Case | Examples |
+|------|----------|----------|
+| Relational | Structured data, transactions | PostgreSQL, MySQL, Oracle |
+| Key-Value | Caching, sessions | Redis |
+| Document | Flexible schemas | MongoDB |
+| Column-Family | Time-series, analytics | Cassandra |
+
+## Indexing
+
+Indexes speed up reads but slow down writes. Choose indexes based on query patterns, not every column.
+
+## Normalization vs Denormalization
+
+Normalize for write consistency; denormalize for read performance when query patterns are well understood.

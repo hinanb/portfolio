@@ -1,0 +1,38 @@
+---
+title: "Redis Cluster with Java"
+description: "Deploy and integrate a 3-master, 3-replica Redis cluster with Java using Docker Compose."
+date: "2025-11-11"
+tags: ["Redis", "Java", "Docker"]
+category: "Java/Databases"
+canonical: "https://medium.com/@hinanb/redis-with-java-730c6092d415"
+---
+
+> Originally published on [Medium](https://medium.com/@hinanb/redis-with-java-730c6092d415).
+
+Redis Cluster requires a minimum of 3 master and 3 replica nodes for proper failover. This guide covers deploying the cluster with Docker Compose and connecting from Java.
+
+## Cluster Setup
+
+Deploy 6 nodes (3 masters + 3 replicas) using Docker Compose. Redis Cluster handles automatic sharding and failover when configured correctly.
+
+## Java Integration
+
+Use **Jedis** or **Lettuce** client libraries to connect to the cluster:
+
+```java
+Set<HostAndPort> nodes = new HashSet<>();
+nodes.add(new HostAndPort("localhost", 7000));
+nodes.add(new HostAndPort("localhost", 7001));
+nodes.add(new HostAndPort("localhost", 7002));
+
+JedisCluster jedisCluster = new JedisCluster(nodes);
+jedisCluster.set("key", "value");
+String value = jedisCluster.get("key");
+```
+
+## Key Considerations
+
+- Minimum 3 master nodes required for cluster mode
+- Use hash tags for related keys that must live on the same slot
+- Monitor cluster health with `redis-cli --cluster check`
+- Configure connection pooling for production workloads

@@ -1,0 +1,49 @@
+[
+  {
+    "id": "confiz-senior",
+    "company": "Confiz Ltd.",
+    "title": "Senior Software Engineer | Line Manager",
+    "location": "Islamabad, Pakistan",
+    "startDate": "2025-06",
+    "endDate": null,
+    "domain": "Government",
+    "highlights": [
+      "Served as Line Manager and Senior Engineer, mentoring engineers and defining KPIs across multiple teams",
+      "Designed and deployed centralized ELK stack processing 1TB+ logs across government platforms",
+      "Led Fleet Management System and Third-Party Auditor Management System implementations",
+      "Conducted 50+ technical interviews"
+    ],
+    "techStack": ["Java 21", "Spring Boot", "Microservices", "Kafka", "ELK Stack", "Redis", "WSO2"]
+  },
+  {
+    "id": "systems-senior",
+    "company": "Systems Ltd.",
+    "title": "Senior Software Engineer",
+    "location": "Islamabad, Pakistan",
+    "startDate": "2021-09",
+    "endDate": "2025-06",
+    "domain": "Banking",
+    "highlights": [
+      "Developed microservices-based Etisalat B2B platform with OCR validation and TIBCO EDMS integration",
+      "Built retail banking platform serving 375+ branches with RAAST, IBFT, card management modules",
+      "Contributed to US media platform backend serving 150M+ monthly users",
+      "Integrated ML clustering model via MQTT for real-time driver fatigue detection"
+    ],
+    "techStack": ["Java 17", "Spring Boot", "AWS", "Kafka", "Firebase", "Temenos"]
+  },
+  {
+    "id": "freelance",
+    "company": "Freelance",
+    "title": "Full Stack & ML Engineer",
+    "location": "Islamabad, Pakistan",
+    "startDate": "2020-01",
+    "endDate": "2021-09",
+    "domain": "Various",
+    "highlights": [
+      "Delivered 50+ backend and data-driven projects using Java, Spring Boot, and AWS",
+      "Migrated monolithic applications to microservices with API Gateway and service discovery",
+      "Led team of 3 developers on multiple client projects"
+    ],
+    "techStack": ["Java", "Spring Boot", "PostgreSQL", "Redis", "AWS", "Python"]
+  }
+]

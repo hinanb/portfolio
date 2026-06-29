@@ -1,0 +1,44 @@
+---
+title: "OOP in Java"
+description: "Core object-oriented programming concepts in Java — classes, objects, inheritance, and polymorphism."
+date: "2025-01-22"
+tags: ["Java", "OOP"]
+category: "Java Fundamentals"
+canonical: "https://medium.com/@hinanb/oop-in-java-b01c848ffc2b"
+---
+
+> Originally published on [Medium](https://medium.com/@hinanb/oop-in-java-b01c848ffc2b).
+
+Object-Oriented Programming is the foundation of Java development. This note covers the four pillars of OOP.
+
+## Classes and Objects
+
+A **class** is a blueprint; an **object** is an instance of that class.
+
+```java
+public class Vehicle {
+    private String brand;
+    
+    public Vehicle(String brand) {
+        this.brand = brand;
+    }
+    
+    public void start() {
+        System.out.println(brand + " is starting...");
+    }
+}
+```
+
+## Four Pillars of OOP
+
+1. **Encapsulation** — Hide internal state, expose through methods
+2. **Inheritance** — Reuse code through parent-child relationships
+3. **Polymorphism** — Same interface, different implementations
+4. **Abstraction** — Hide complexity, show essential features
+
+## Best Practices
+
+- Favor composition over inheritance
+- Program to interfaces, not implementations
+- Keep classes focused (Single Responsibility Principle)
+- Use access modifiers appropriately (`private`, `protected`, `public`)
